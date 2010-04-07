@@ -1,0 +1,8 @@
+.DS_Store
+._*
+.svn
+.hg
+.*.swp
+build
+*.perspectivev3
+*.pbxuser

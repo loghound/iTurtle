@@ -1,0 +1,363 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D3623260D0F684500981E51 /* iturtleAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* iturtleAppDelegate.m */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
+		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
+		54E0505D116C445F008FEBC4 /* LogoParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E0505C116C445F008FEBC4 /* LogoParser.m */; };
+		54E05062116C448C008FEBC4 /* LogoParserExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E05061116C448C008FEBC4 /* LogoParserExpression.m */; };
+		54E05120116C57C3008FEBC4 /* NSTextViewOutputExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E0511F116C57C3008FEBC4 /* NSTextViewOutputExtensions.m */; };
+		54E051B6116C5DCC008FEBC4 /* defaultTurtle.txt in Resources */ = {isa = PBXBuildFile; fileRef = 54E051B5116C5DCC008FEBC4 /* defaultTurtle.txt */; };
+		54EF8771116C41EB0004BA2F /* Commands.c in Sources */ = {isa = PBXBuildFile; fileRef = 54EF8770116C41EB0004BA2F /* Commands.c */; };
+		54EF8777116C41F80004BA2F /* Utilities.c in Sources */ = {isa = PBXBuildFile; fileRef = 54EF8776116C41F80004BA2F /* Utilities.c */; };
+		54EF877C116C42080004BA2F /* Debugging.c in Sources */ = {isa = PBXBuildFile; fileRef = 54EF877B116C42080004BA2F /* Debugging.c */; };
+		54EF878C116C42240004BA2F /* DrawCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EF8783116C42240004BA2F /* DrawCommand.m */; };
+		54EF878D116C42240004BA2F /* Expression.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EF8785116C42240004BA2F /* Expression.m */; };
+		54EF878E116C42240004BA2F /* StackObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EF8787116C42240004BA2F /* StackObject.m */; };
+		54EF878F116C42240004BA2F /* Variable.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EF8789116C42240004BA2F /* Variable.m */; };
+		54EF8790116C42240004BA2F /* LogoColorTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EF878B116C42240004BA2F /* LogoColorTable.m */; };
+		54EF87A1116C42E60004BA2F /* Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EF87A0116C42E60004BA2F /* Controller.m */; };
+		54EF87A9116C43000004BA2F /* Preferences.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EF87A8116C43000004BA2F /* Preferences.m */; };
+		54EF87B0116C431C0004BA2F /* Turtle.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EF87AF116C431C0004BA2F /* Turtle.m */; };
+		54EF87BF116C43980004BA2F /* TurtleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EF87BE116C43980004BA2F /* TurtleView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623240D0F684500981E51 /* iturtleAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iturtleAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* iturtleAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iturtleAppDelegate.m; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* iturtle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iturtle.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* iturtle_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iturtle_Prefix.pch; sourceTree = "<group>"; };
+		54E0505B116C445F008FEBC4 /* LogoParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogoParser.h; sourceTree = "<group>"; };
+		54E0505C116C445F008FEBC4 /* LogoParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogoParser.m; sourceTree = "<group>"; };
+		54E05060116C448C008FEBC4 /* LogoParserExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogoParserExpression.h; sourceTree = "<group>"; };
+		54E05061116C448C008FEBC4 /* LogoParserExpression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogoParserExpression.m; sourceTree = "<group>"; };
+		54E0511E116C57C3008FEBC4 /* NSTextViewOutputExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSTextViewOutputExtensions.h; sourceTree = "<group>"; };
+		54E0511F116C57C3008FEBC4 /* NSTextViewOutputExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSTextViewOutputExtensions.m; sourceTree = "<group>"; };
+		54E051B5116C5DCC008FEBC4 /* defaultTurtle.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = defaultTurtle.txt; sourceTree = "<group>"; };
+		54EF876F116C41EB0004BA2F /* Commands.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Commands.h; sourceTree = "<group>"; };
+		54EF8770116C41EB0004BA2F /* Commands.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Commands.c; sourceTree = "<group>"; };
+		54EF8775116C41F80004BA2F /* Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utilities.h; sourceTree = "<group>"; };
+		54EF8776116C41F80004BA2F /* Utilities.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Utilities.c; sourceTree = "<group>"; };
+		54EF877A116C42080004BA2F /* Debugging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Debugging.h; sourceTree = "<group>"; };
+		54EF877B116C42080004BA2F /* Debugging.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Debugging.c; sourceTree = "<group>"; };
+		54EF8782116C42240004BA2F /* DrawCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawCommand.h; sourceTree = "<group>"; };
+		54EF8783116C42240004BA2F /* DrawCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawCommand.m; sourceTree = "<group>"; };
+		54EF8784116C42240004BA2F /* Expression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Expression.h; sourceTree = "<group>"; };
+		54EF8785116C42240004BA2F /* Expression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Expression.m; sourceTree = "<group>"; };
+		54EF8786116C42240004BA2F /* StackObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackObject.h; sourceTree = "<group>"; };
+		54EF8787116C42240004BA2F /* StackObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StackObject.m; sourceTree = "<group>"; };
+		54EF8788116C42240004BA2F /* Variable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Variable.h; sourceTree = "<group>"; };
+		54EF8789116C42240004BA2F /* Variable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Variable.m; sourceTree = "<group>"; };
+		54EF878A116C42240004BA2F /* LogoColorTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogoColorTable.h; sourceTree = "<group>"; };
+		54EF878B116C42240004BA2F /* LogoColorTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogoColorTable.m; sourceTree = "<group>"; };
+		54EF879F116C42E60004BA2F /* Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Controller.h; sourceTree = "<group>"; };
+		54EF87A0116C42E60004BA2F /* Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Controller.m; sourceTree = "<group>"; };
+		54EF87A7116C43000004BA2F /* Preferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Preferences.h; sourceTree = "<group>"; };
+		54EF87A8116C43000004BA2F /* Preferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Preferences.m; sourceTree = "<group>"; };
+		54EF87AE116C431C0004BA2F /* Turtle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Turtle.h; sourceTree = "<group>"; };
+		54EF87AF116C431C0004BA2F /* Turtle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Turtle.m; sourceTree = "<group>"; };
+		54EF87BD116C43980004BA2F /* TurtleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TurtleView.h; sourceTree = "<group>"; };
+		54EF87BE116C43980004BA2F /* TurtleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TurtleView.m; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* iturtle-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "iturtle-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				54E0505B116C445F008FEBC4 /* LogoParser.h */,
+				54E0505C116C445F008FEBC4 /* LogoParser.m */,
+				54E05060116C448C008FEBC4 /* LogoParserExpression.h */,
+				54E05061116C448C008FEBC4 /* LogoParserExpression.m */,
+				54EF87BD116C43980004BA2F /* TurtleView.h */,
+				54EF87BE116C43980004BA2F /* TurtleView.m */,
+				54EF87AE116C431C0004BA2F /* Turtle.h */,
+				54EF87AF116C431C0004BA2F /* Turtle.m */,
+				54EF87A7116C43000004BA2F /* Preferences.h */,
+				54EF87A8116C43000004BA2F /* Preferences.m */,
+				54EF879F116C42E60004BA2F /* Controller.h */,
+				54EF87A0116C42E60004BA2F /* Controller.m */,
+				54E0511E116C57C3008FEBC4 /* NSTextViewOutputExtensions.h */,
+				54E0511F116C57C3008FEBC4 /* NSTextViewOutputExtensions.m */,
+				54EF8781116C42240004BA2F /* Standalone objects */,
+				1D3623240D0F684500981E51 /* iturtleAppDelegate.h */,
+				1D3623250D0F684500981E51 /* iturtleAppDelegate.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* iturtle.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				54EF8774116C41F80004BA2F /* Utilities */,
+				54EF876E116C41EB0004BA2F /* Globals */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* iturtle_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
+				8D1107310486CEB800E47090 /* iturtle-Info.plist */,
+				54E051B5116C5DCC008FEBC4 /* defaultTurtle.txt */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		54EF876E116C41EB0004BA2F /* Globals */ = {
+			isa = PBXGroup;
+			children = (
+				54EF876F116C41EB0004BA2F /* Commands.h */,
+				54EF8770116C41EB0004BA2F /* Commands.c */,
+			);
+			path = Globals;
+			sourceTree = "<group>";
+		};
+		54EF8774116C41F80004BA2F /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				54EF877A116C42080004BA2F /* Debugging.h */,
+				54EF877B116C42080004BA2F /* Debugging.c */,
+				54EF8775116C41F80004BA2F /* Utilities.h */,
+				54EF8776116C41F80004BA2F /* Utilities.c */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		54EF8781116C42240004BA2F /* Standalone objects */ = {
+			isa = PBXGroup;
+			children = (
+				54EF8782116C42240004BA2F /* DrawCommand.h */,
+				54EF8783116C42240004BA2F /* DrawCommand.m */,
+				54EF8784116C42240004BA2F /* Expression.h */,
+				54EF8785116C42240004BA2F /* Expression.m */,
+				54EF8786116C42240004BA2F /* StackObject.h */,
+				54EF8787116C42240004BA2F /* StackObject.m */,
+				54EF8788116C42240004BA2F /* Variable.h */,
+				54EF8789116C42240004BA2F /* Variable.m */,
+				54EF878A116C42240004BA2F /* LogoColorTable.h */,
+				54EF878B116C42240004BA2F /* LogoColorTable.m */,
+			);
+			name = "Standalone objects";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* iturtle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "iturtle" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iturtle;
+			productName = iturtle;
+			productReference = 1D6058910D05DD3D006BFB54 /* iturtle.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "iturtle" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* iturtle */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
+				54E051B6116C5DCC008FEBC4 /* defaultTurtle.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				1D3623260D0F684500981E51 /* iturtleAppDelegate.m in Sources */,
+				54EF8771116C41EB0004BA2F /* Commands.c in Sources */,
+				54EF8777116C41F80004BA2F /* Utilities.c in Sources */,
+				54EF877C116C42080004BA2F /* Debugging.c in Sources */,
+				54EF878C116C42240004BA2F /* DrawCommand.m in Sources */,
+				54EF878D116C42240004BA2F /* Expression.m in Sources */,
+				54EF878E116C42240004BA2F /* StackObject.m in Sources */,
+				54EF878F116C42240004BA2F /* Variable.m in Sources */,
+				54EF8790116C42240004BA2F /* LogoColorTable.m in Sources */,
+				54EF87A1116C42E60004BA2F /* Controller.m in Sources */,
+				54EF87A9116C43000004BA2F /* Preferences.m in Sources */,
+				54EF87B0116C431C0004BA2F /* Turtle.m in Sources */,
+				54EF87BF116C43980004BA2F /* TurtleView.m in Sources */,
+				54E0505D116C445F008FEBC4 /* LogoParser.m in Sources */,
+				54E05062116C448C008FEBC4 /* LogoParserExpression.m in Sources */,
+				54E05120116C57C3008FEBC4 /* NSTextViewOutputExtensions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = iturtle_Prefix.pch;
+				INFOPLIST_FILE = "iturtle-Info.plist";
+				PRODUCT_NAME = iturtle;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = iturtle_Prefix.pch;
+				INFOPLIST_FILE = "iturtle-Info.plist";
+				PRODUCT_NAME = iturtle;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"ARCHS[sdk=iphoneos*]" = armv7;
+				"ARCHS[sdk=iphonesimulator*]" = i386;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos3.2;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"ARCHS[sdk=iphoneos*]" = armv7;
+				"ARCHS[sdk=iphonesimulator*]" = i386;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PREBINDING = NO;
+				SDKROOT = iphoneos3.2;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "iturtle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "iturtle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
