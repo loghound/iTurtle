@@ -13,7 +13,15 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
+		5416B761116DBAAE008EE7BB /* app_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5416B760116DBAAE008EE7BB /* app_icon.png */; };
+		5416B763116DBAB1008EE7BB /* app_store_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5416B762116DBAB1008EE7BB /* app_store_icon.png */; };
+		5418A9B6116DBE2800766C50 /* Default-Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 5418A9B5116DBE2800766C50 /* Default-Portrait.png */; };
+		5418A9B8116DBE2A00766C50 /* Default-PortraitUpsideDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 5418A9B7116DBE2A00766C50 /* Default-PortraitUpsideDown.png */; };
+		5418A9BA116DBE2E00766C50 /* Default-Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = 5418A9B9116DBE2D00766C50 /* Default-Landscape.png */; };
+		5418A9BC116DBE3000766C50 /* Default-LandscapeLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = 5418A9BB116DBE3000766C50 /* Default-LandscapeLeft.png */; };
 		54309B31116D628B0045A868 /* Wood13_44px.png in Resources */ = {isa = PBXBuildFile; fileRef = 54309B30116D628B0045A868 /* Wood13_44px.png */; };
+		546F8FB0116DAF4C00BCF9F9 /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 546F8FAE116DAF4C00BCF9F9 /* HelpViewController.m */; };
+		546F8FB1116DAF4C00BCF9F9 /* HelpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 546F8FAF116DAF4C00BCF9F9 /* HelpViewController.xib */; };
 		547D9585116D4C5B00B89777 /* TurtleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 547D9583116D4C5B00B89777 /* TurtleViewController.m */; };
 		547D9586116D4C5B00B89777 /* TurtleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 547D9584116D4C5B00B89777 /* TurtleViewController.xib */; };
 		54E0505D116C445F008FEBC4 /* LogoParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E0505C116C445F008FEBC4 /* LogoParser.m */; };
@@ -38,13 +46,22 @@
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* iturtleAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = iturtleAppDelegate.h; path = Classes/iturtleAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* iturtleAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = iturtleAppDelegate.m; path = Classes/iturtleAppDelegate.m; sourceTree = "<group>"; };
-		1D6058910D05DD3D006BFB54 /* iturtle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iturtle.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D6058910D05DD3D006BFB54 /* iTurtle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTurtle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		32CA4F630368D1EE00C91783 /* iturtle_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iturtle_Prefix.pch; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* iTurtle_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iTurtle_Prefix.pch; sourceTree = "<group>"; };
+		5416B760116DBAAE008EE7BB /* app_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = app_icon.png; sourceTree = "<group>"; };
+		5416B762116DBAB1008EE7BB /* app_store_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = app_store_icon.png; sourceTree = "<group>"; };
+		5418A9B5116DBE2800766C50 /* Default-Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait.png"; sourceTree = "<group>"; };
+		5418A9B7116DBE2A00766C50 /* Default-PortraitUpsideDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-PortraitUpsideDown.png"; sourceTree = "<group>"; };
+		5418A9B9116DBE2D00766C50 /* Default-Landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape.png"; sourceTree = "<group>"; };
+		5418A9BB116DBE3000766C50 /* Default-LandscapeLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-LandscapeLeft.png"; sourceTree = "<group>"; };
 		54309B30116D628B0045A868 /* Wood13_44px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Wood13_44px.png; sourceTree = "<group>"; };
+		546F8FAD116DAF4C00BCF9F9 /* HelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpViewController.h; sourceTree = "<group>"; };
+		546F8FAE116DAF4C00BCF9F9 /* HelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpViewController.m; sourceTree = "<group>"; };
+		546F8FAF116DAF4C00BCF9F9 /* HelpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HelpViewController.xib; sourceTree = "<group>"; };
 		547D9582116D4C5B00B89777 /* TurtleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TurtleViewController.h; sourceTree = "<group>"; };
 		547D9583116D4C5B00B89777 /* TurtleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TurtleViewController.m; sourceTree = "<group>"; };
 		547D9584116D4C5B00B89777 /* TurtleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TurtleViewController.xib; sourceTree = "<group>"; };
@@ -79,7 +96,7 @@
 		54EF87AF116C431C0004BA2F /* Turtle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Turtle.m; sourceTree = "<group>"; };
 		54EF87BD116C43980004BA2F /* TurtleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TurtleView.h; sourceTree = "<group>"; };
 		54EF87BE116C43980004BA2F /* TurtleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TurtleView.m; sourceTree = "<group>"; };
-		8D1107310486CEB800E47090 /* iturtle-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "iturtle-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* iTurtle-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "iTurtle-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,7 +138,7 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1D6058910D05DD3D006BFB54 /* iturtle.app */,
+				1D6058910D05DD3D006BFB54 /* iTurtle.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -144,7 +161,7 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
-				32CA4F630368D1EE00C91783 /* iturtle_Prefix.pch */,
+				32CA4F630368D1EE00C91783 /* iTurtle_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
 			);
 			name = "Other Sources";
@@ -155,8 +172,14 @@
 			children = (
 				54309B30116D628B0045A868 /* Wood13_44px.png */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
-				8D1107310486CEB800E47090 /* iturtle-Info.plist */,
+				8D1107310486CEB800E47090 /* iTurtle-Info.plist */,
 				54E051B5116C5DCC008FEBC4 /* defaultTurtle.txt */,
+				5416B760116DBAAE008EE7BB /* app_icon.png */,
+				5416B762116DBAB1008EE7BB /* app_store_icon.png */,
+				5418A9B5116DBE2800766C50 /* Default-Portrait.png */,
+				5418A9B7116DBE2A00766C50 /* Default-PortraitUpsideDown.png */,
+				5418A9B9116DBE2D00766C50 /* Default-Landscape.png */,
+				5418A9BB116DBE3000766C50 /* Default-LandscapeLeft.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -171,9 +194,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		546F8FAB116DAF3C00BCF9F9 /* Help */ = {
+			isa = PBXGroup;
+			children = (
+				546F8FAD116DAF4C00BCF9F9 /* HelpViewController.h */,
+				546F8FAE116DAF4C00BCF9F9 /* HelpViewController.m */,
+				546F8FAF116DAF4C00BCF9F9 /* HelpViewController.xib */,
+			);
+			name = Help;
+			sourceTree = "<group>";
+		};
 		547D9581116D4C3900B89777 /* LH */ = {
 			isa = PBXGroup;
 			children = (
+				546F8FAB116DAF3C00BCF9F9 /* Help */,
 				1D3623240D0F684500981E51 /* iturtleAppDelegate.h */,
 				1D3623250D0F684500981E51 /* iturtleAppDelegate.m */,
 				547D9582116D4C5B00B89777 /* TurtleViewController.h */,
@@ -223,9 +257,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1D6058900D05DD3D006BFB54 /* iturtle */ = {
+		1D6058900D05DD3D006BFB54 /* iTurtle */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "iturtle" */;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "iTurtle" */;
 			buildPhases = (
 				1D60588D0D05DD3D006BFB54 /* Resources */,
 				1D60588E0D05DD3D006BFB54 /* Sources */,
@@ -235,9 +269,9 @@
 			);
 			dependencies = (
 			);
-			name = iturtle;
+			name = iTurtle;
 			productName = iturtle;
-			productReference = 1D6058910D05DD3D006BFB54 /* iturtle.app */;
+			productReference = 1D6058910D05DD3D006BFB54 /* iTurtle.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -252,7 +286,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1D6058900D05DD3D006BFB54 /* iturtle */,
+				1D6058900D05DD3D006BFB54 /* iTurtle */,
 			);
 		};
 /* End PBXProject section */
@@ -266,6 +300,13 @@
 				54E051B6116C5DCC008FEBC4 /* defaultTurtle.txt in Resources */,
 				547D9586116D4C5B00B89777 /* TurtleViewController.xib in Resources */,
 				54309B31116D628B0045A868 /* Wood13_44px.png in Resources */,
+				546F8FB1116DAF4C00BCF9F9 /* HelpViewController.xib in Resources */,
+				5416B761116DBAAE008EE7BB /* app_icon.png in Resources */,
+				5416B763116DBAB1008EE7BB /* app_store_icon.png in Resources */,
+				5418A9B6116DBE2800766C50 /* Default-Portrait.png in Resources */,
+				5418A9B8116DBE2A00766C50 /* Default-PortraitUpsideDown.png in Resources */,
+				5418A9BA116DBE2E00766C50 /* Default-Landscape.png in Resources */,
+				5418A9BC116DBE3000766C50 /* Default-LandscapeLeft.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +335,7 @@
 				54E05062116C448C008FEBC4 /* LogoParserExpression.m in Sources */,
 				54E05120116C57C3008FEBC4 /* NSTextViewOutputExtensions.m in Sources */,
 				547D9585116D4C5B00B89777 /* TurtleViewController.m in Sources */,
+				546F8FB0116DAF4C00BCF9F9 /* HelpViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,9 +350,9 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = iturtle_Prefix.pch;
-				INFOPLIST_FILE = "iturtle-Info.plist";
-				PRODUCT_NAME = iturtle;
+				GCC_PREFIX_HEADER = iTurtle_Prefix.pch;
+				INFOPLIST_FILE = "iTurtle-Info.plist";
+				PRODUCT_NAME = iTurtle;
 			};
 			name = Debug;
 		};
@@ -320,9 +362,9 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = iturtle_Prefix.pch;
-				INFOPLIST_FILE = "iturtle-Info.plist";
-				PRODUCT_NAME = iturtle;
+				GCC_PREFIX_HEADER = iTurtle_Prefix.pch;
+				INFOPLIST_FILE = "iTurtle-Info.plist";
+				PRODUCT_NAME = iTurtle;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -361,7 +403,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "iturtle" */ = {
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "iTurtle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1D6058940D05DD3E006BFB54 /* Debug */,

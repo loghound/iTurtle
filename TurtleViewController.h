@@ -21,8 +21,15 @@
 	CGFloat frequency;
 	IBOutlet UIView *debugParentView;
 	IBOutlet UIView *textViewsParent;
+	BOOL errorWindowCollapsed;
+	IBOutlet UIButton *startButton;
+	IBOutlet UIButton *stopButton;
+	UIPopoverController *popController;
 
 }
+
+@property (nonatomic, retain) IBOutlet UIButton *startButton;;
+@property (nonatomic, retain) IBOutlet UIButton *stopButton;
 @property (nonatomic, retain) IBOutlet TurtleView *outputView;
 @property (nonatomic, retain) LogoParser *parser;
 @property (nonatomic, retain) 	IBOutlet UITextView *debugView;
@@ -30,8 +37,11 @@
 @property (retain) IBOutlet UIView *debugParentView;
 @property (retain) IBOutlet UIView *textViewsParent;
 @property (assign) CGFloat frequency;
+@property (retain) UIPopoverController * popController;
 -(IBAction) doIt:(id) sender;
 - (IBAction)run:(id)sender;
 - (IBAction)stop:(id)sender;
 -(IBAction) fullScreen:(id) sender ;
+-(IBAction) toggleErrorScreen:(id) sender;
+-(IBAction) toggleHelp:(id) sender;
 @end

@@ -7,33 +7,80 @@
 //
 
 #import "TurtleViewController.h"
-
+#import "HelpViewController.h"
 
 @implementation TurtleViewController
 @synthesize parser,outputView;
 @synthesize debugView,inputView;
 @synthesize frequency;
 @synthesize debugParentView,textViewsParent;
+@synthesize startButton,stopButton;
+@synthesize popController;
+
+-(IBAction) toggleHelp:(UIButton*) helpButton {
+	HelpViewController *helpController=[HelpViewController new];
+	
+	CGRect helpButtonFrame=helpButton.bounds;
+	CGRect translatedHelpButtonFrame=[self.view convertRect:helpButtonFrame fromView:helpButton];
+	
+
+	helpController.modalPresentationStyle=UIModalPresentationPageSheet;
+	self.popController=[[UIPopoverController alloc]
+										 initWithContentViewController:helpController];
+	[helpController release];
+	popController.delegate=self;
+	
+	[popController presentPopoverFromRect:translatedHelpButtonFrame
+								   inView:self.view
+				 permittedArrowDirections:UIPopoverArrowDirectionAny
+								 animated:YES];
+	
+//	[self presentModalViewController:popController animated:YES];
+	
+}
+
+- (void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController {
+	
+	self.popController=nil;
+}
 
 -(IBAction) fullScreen:(id) sender {
 	[UIView beginAnimations:@"full screen" context:nil];
 	CGPoint center=textViewsParent.center;
+	CGRect textFrame=textViewsParent.frame;
 	CGFloat centerMove=2*center.y;
+	if (textFrame.origin.y<0)
+		centerMove=-(-textFrame.origin.y+43); // 43 is height of top menu bar
 	center.y=center.y-centerMove;
 	textViewsParent.center=center;
 	CGRect turtleView=outputView.frame;
 	turtleView.origin.y-=centerMove;
 	turtleView.size.height+=centerMove;
 	outputView.frame=turtleView;
-	//
-//	CGPoint turtleCenter=outputView.center;
-//	turtleCenter.y=turtleCenter.y-centerMove/2;
-//	outputView.center=turtleCenter;
-//	turtleView.size.height=turtleView.size.height+centerMove;
-//	outputView.bounds=turtleView;
 	[outputView setNeedsDisplay];
 	[UIView commitAnimations];
 	
+}
+
+-(IBAction) toggleErrorScreen:(id) sender {
+	[UIView beginAnimations:@"toggle error screen" context:nil];
+	CGPoint errorCenter=debugParentView.center;
+	CGRect errorFrame=debugParentView.frame;
+	CGRect inputFrame=inputView.frame;
+	CGFloat offset=0;
+	if (!errorWindowCollapsed) {
+		offset=errorFrame.size.width-33;
+	} else {
+		offset=-errorFrame.size.width+33;
+		
+	}
+	errorCenter.x+=offset;
+	inputFrame.size.width+=offset;
+	errorWindowCollapsed=!errorWindowCollapsed;
+
+	debugParentView.center=errorCenter;
+	inputView.frame=inputFrame;
+	[UIView commitAnimations];
 }
 
 
@@ -55,6 +102,10 @@
 {
 	if(timer)
 	{
+		[UIView beginAnimations:@"startOn" context:nil];
+		stopButton.alpha=0.0;
+		startButton.alpha=1.0;
+		[UIView commitAnimations];
 		[timer invalidate];
 		[timer release];
 		timer = NULL;
@@ -130,6 +181,8 @@
 //
 - (void)run
 {
+	stopButton.alpha=1.0;
+	startButton.alpha=0.0;
 	self.parser=[[LogoParser alloc]initWithOutputView:outputView errorView:debugView]; // nil error view
 	outputView.parser=self.parser; // set up the parser
 	[self timerStop];				// stop processing commands, so that variables are not changed after re-initializing them
@@ -147,6 +200,7 @@
 //
 - (void)stop
 {
+	NSLog(@"stop");
 	[self timerStop];	// stop processing commands
 #if (defined(DEBUGFLAG) && DEBUGFLAG)
 	//	[parser forgetAll];	// clear memory used by parser (for debugging only, as the user should be able to print the output, AND if we need to redraw, we won't have the drawing commands, if we use forgetAll!)
@@ -158,13 +212,21 @@
 // Action method
 - (IBAction)run:(id)sender
 {
+	[UIView beginAnimations:@"startAnimation" context:nil];
 	[self run];
+	[UIView commitAnimations];
+	[self.inputView resignFirstResponder];
+	if (!errorWindowCollapsed)
+		[self toggleErrorScreen:nil];
+
 }
 
 // Action method
 - (IBAction)stop:(id)sender
 {
+	[UIView beginAnimations:@"stopAnimation" context:nil];
 	[self stop];
+	[UIView commitAnimations];
 }
 
 
@@ -191,12 +253,50 @@
 	} else
 		self.inputView.text=@"";
 	self.frequency=7e-7;
+	NSLog(@"Available fonts=%@",[UIFont fontNamesForFamilyName:@"courier-bold"]);
+	self.inputView.font=[UIFont fontWithName:@"courier-bold" size:16.0];
+	self.debugView.font=[UIFont fontWithName:@"courier" size:14.0];
+
+	[[NSNotificationCenter defaultCenter]addObserver:self
+											selector:@selector(errorTextChanged:)
+												name:@"ERROR_TEXT"
+											  object:nil];
+	[self toggleErrorScreen:nil]; // start with it off
+	
+	stopButton.alpha=0.0;
+	startButton.alpha=1.0;
 	
 }
 
+-(void) errorTextChanged:(NSNotification*)not {
+	if (errorWindowCollapsed) {
+		[self toggleErrorScreen:nil];
+		[inputView becomeFirstResponder];// make it first responder
+		// totally ghetto for now
+		NSRange lineRange=[debugView.text rangeOfString:@"line"];
+		if (lineRange.location!=NSNotFound) {
+			NSString *lineNumberString=[debugView.text substringFromIndex:lineRange.location+lineRange.length];
+			NSInteger lineNumber=[lineNumberString intValue];
+			NSInteger index=0;
+			NSInteger numberReturns=0;
+			NSString *sourceString=inputView.text;
+			while (index < [sourceString length] && numberReturns<lineNumber-1) {
+				unichar returnKey='\n';
+				if ([sourceString characterAtIndex:index]==returnKey)
+					numberReturns++;
+				index++;
+			}
+			inputView.selectedRange=NSMakeRange(index, 0);
+			[inputView scrollRangeToVisible:NSMakeRange(index,0)];
+		}
+	
+	}
+}
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     // Overriden to allow any orientation.
+	[self.popController dismissPopoverAnimated:NO];
+	self.popController=nil;
     return YES;
 }
 

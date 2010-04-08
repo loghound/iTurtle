@@ -43,6 +43,7 @@
     NSAttributedString	*attrStr;
     NSDictionary		*dict;
 	self.text=[self.text stringByAppendingString:aString];
+	[[NSNotificationCenter defaultCenter]postNotificationName:@"ERROR_TEXT" object:self];
 	return;
 //
 //    dict = [NSDictionary dictionaryWithObjectsAndKeys:textColor, NSForegroundColorAttributeName, [NSFont userFixedPitchFontOfSize:0.0], NSFontAttributeName, nil];
@@ -61,7 +62,7 @@
     NSString			*str;
 
     str = [aString stringByAppendingString:@"\n"];
-		self.text=[self.text stringByAppendingString:aString];
+	[self appendString:str ofColor:textColor];
 	return;
 //	
 //    dict = [NSDictionary dictionaryWithObjectsAndKeys:textColor, NSForegroundColorAttributeName, [NSFont userFixedPitchFontOfSize:0.0], NSFontAttributeName, nil];
