@@ -46,6 +46,8 @@
 
 @implementation TurtleView
 
+@synthesize parser;
+
 - (id)init	// never invoked (!)
 {
 	self = [super init];
@@ -86,6 +88,10 @@
 //
 - (void)drawRect:(CGRect)rect
 {
+	CGRect bounds=[self bounds];
+	CGContextRef context=UIGraphicsGetCurrentContext();
+	CGContextTranslateCTM(context, 0, bounds.size.height);
+	CGContextScaleCTM(context, 1, -1);
 #ifdef TIME_IT
 	static int		initTime = 1;
 	static double	startTime1;
@@ -186,7 +192,7 @@
 		pt = [drawCommand toPoint];
 		pt.x += hOffset;
 		pt.y += vOffset;
-		[path lineToPoint:pt];
+		[path addLineToPoint:pt];
 		[path stroke];
 		[path removeAllPoints];		// removing all points is faster than deallocating and reallocating. <JB>
 	}

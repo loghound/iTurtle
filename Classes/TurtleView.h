@@ -57,4 +57,6 @@
 // Accessor methods
 - (BOOL)setPaperColor:(float)aPaperColor;
 - (float)paperColor;
+
+@property (assign) 	IBOutlet id		parser;
 @end

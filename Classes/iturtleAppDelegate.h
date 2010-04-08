@@ -7,27 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "TurtleView.h"
-#import "LogoParser.h"
+#import "TurtleViewController.h"
 
 @interface iturtleAppDelegate : NSObject <UIApplicationDelegate> {
     UIWindow *window;
-	IBOutlet TurtleView *outputView;
-	LogoParser *parser;
-	IBOutlet UITextView *debugView;
-	IBOutlet UITextView *inputView;
-	NSTimer *timer;
-	CGFloat frequency;
+	IBOutlet TurtleViewController *turtleViewController;
+
 }
 
+@property (retain) 	IBOutlet TurtleViewController *turtleViewController;;
+
 @property (nonatomic, retain) IBOutlet UIWindow *window;
-@property (nonatomic, retain) IBOutlet TurtleView *outputView;
-@property (nonatomic, retain) LogoParser *parser;
-@property (nonatomic, retain) 	IBOutlet UITextView *debugView;
-@property (nonatomic, retain) 	IBOutlet UITextView *inputView;
-@property (assign) CGFloat frequency;
--(IBAction) doIt:(id) sender;
-- (IBAction)run:(id)sender;
-- (IBAction)stop:(id)sender;
+
 @end
 
