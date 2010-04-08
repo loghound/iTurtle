@@ -13,6 +13,28 @@
 @synthesize parser,outputView;
 @synthesize debugView,inputView;
 @synthesize frequency;
+@synthesize debugParentView,textViewsParent;
+
+-(IBAction) fullScreen:(id) sender {
+	[UIView beginAnimations:@"full screen" context:nil];
+	CGPoint center=textViewsParent.center;
+	CGFloat centerMove=2*center.y;
+	center.y=center.y-centerMove;
+	textViewsParent.center=center;
+	CGRect turtleView=outputView.frame;
+	turtleView.origin.y-=centerMove;
+	turtleView.size.height+=centerMove;
+	outputView.frame=turtleView;
+	//
+//	CGPoint turtleCenter=outputView.center;
+//	turtleCenter.y=turtleCenter.y-centerMove/2;
+//	outputView.center=turtleCenter;
+//	turtleView.size.height=turtleView.size.height+centerMove;
+//	outputView.bounds=turtleView;
+	[outputView setNeedsDisplay];
+	[UIView commitAnimations];
+	
+}
 
 
 -(IBAction) doIt:(id) sender {
