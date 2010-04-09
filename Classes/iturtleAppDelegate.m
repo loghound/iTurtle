@@ -18,6 +18,7 @@
     // Override point for customization after application launch
 	[window addSubview:turtleViewController.view];
     [window makeKeyAndVisible];
+	[turtleViewController recallProgram];
 	
 
 	
@@ -25,7 +26,10 @@
     return YES;
 }
 
-
+- (void)applicationWillTerminate:(UIApplication *)application {
+	[turtleViewController saveProgram];
+	
+}
 
 - (void)dealloc {
     [window release];

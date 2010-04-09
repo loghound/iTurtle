@@ -26,7 +26,9 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
 	
-	[self.webView loadHTMLString:@"<strong>Help!</strong>" baseURL:nil];
+	NSString *helpString=[[NSBundle mainBundle]pathForResource:@"docs" ofType:@"html"];
+	
+	[self.webView loadHTMLString:[NSString stringWithContentsOfFile:helpString] baseURL:nil];
     [super viewDidLoad];
 }
 

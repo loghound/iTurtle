@@ -1,0 +1,110 @@
+<html>
+<head>
+<style type="text/css">
+
+.codebox {
+	background-color: #e7e7e7;
+	padding: 1em;
+	margin: 0.5em;
+	font-family: monospace;
+	border-style: dashed;
+	border-width: 1px;
+}
+
+</style>
+<meta name="AppleTitle" content="LOGO Commands">
+<meta name="AppleFont" content="Lucida Grande">
+<title>iTurtle Help - LOGO Commands</title>
+</head>
+<body link="#1AAF1E" vlink="#1AAF1E">
+<br>
+
+Welcome to iTurtle -- iTurtle is a fun iPad app that helps teach the basics of computer programming.  
+
+iTurtle can also create fairly complex graphics with very simple commands.  It's a great way to explore
+your createive side.  let's start with a simple example.  Use the 'copy and paste' feature to grab the code below and paste
+it into the command window of iTurtle then hit 'go' to see wha happens.  Once you've done that 
+come back here.
+
+
+<hr />
+<div class='codebox'>
+<br />forward 100
+<br />right 90 
+<br />forward 100 
+<br />right 90 
+<br />forward 100 
+<br />right 90 
+<br />forward 100 
+</div>
+<hr />
+
+Pretty neat huh? Try changing some of the values to see how it effects it.  <br />
+
+iTurtle uses Logo as it's command language -- there are a number of commands that it understandss. 
+
+
+
+
+		<ul>
+			<li>FORWARD x</li>
+			<li>BACKWARD x</li>
+			<li>RIGHT x</li>
+			<li>LEFT x</li>
+			<li>PENUP</li>
+			<li>PENDOWN</li>
+			<li>HOME - go back to (0,0)</li>
+			<li>CLEAR - clear the screen</li>
+			<li>REPEAT x [command]</li>
+		</ul>	
+		<i>The letter "x" above should be replaced by a number representing the number of
+		spaces to move (in the case of FORWARD and BACKWARD commands), the number
+		of degress to turn (in the case of RIGHT and LEFT), or the number of repetitions (REPEAT command).  You can also use 'Random' to place it a random number</i>
+		
+		
+		&nbsp;&nbsp;<u>Advanced commands:</u>
+		<br>
+		<ul>
+			<li>NEWTURTLE "name - create a new turtle, with a name</li>
+			<li>TALKTO "name - send commands to a specific turtle</li>
+			<li>MAKE "name [value] - create a variable with a value</li>
+			<li>SETCOLOR :[color|variable] - set the drawing color</li>
+			<li>SETBG :[color|variable] - set the background color</li>
+		</ul>	
+		
+		
+		Here is a another example using some of the advanced commands.
+		
+
+<div class='codebox'>
+<br />newturtle "Fred
+<br />talkto "Fred
+<br />setcolor 10
+<br />make "bgcolor 123
+<br />setbg :bgcolor
+<br />forward 100
+<br />right 90
+<br />repeat 4 [forward 100 right 90]
+</div>
+
+
+Here is a 'Escher' like picture
+
+<div class='codebox'>
+<br />repeat 6 [
+<br />	right 60 
+<br />	setcolor random
+<br />	repeat 6 [
+<br />		forward 50
+<br />		right 60
+<br />	]
+<br />]
+</div>
+
+
+		<br>
+		<br>
+		<br>
+
+</body>
+</html>

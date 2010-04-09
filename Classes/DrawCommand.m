@@ -36,7 +36,7 @@
 
 + (id)drawCommandWithColor:(UIColor *)aColor andLineWidth:(float)aLineWidth fromPoint:(CGPoint)aFromPoint toPoint:(CGPoint)aToPoint
 {
-	return([[DrawCommand alloc] initWithColor:aColor andLineWidth:aLineWidth fromPoint:aFromPoint toPoint:aToPoint]);
+	return([[[DrawCommand alloc] initWithColor:aColor andLineWidth:aLineWidth fromPoint:aFromPoint toPoint:aToPoint]autorelease]);
 }
 
 // Going away:

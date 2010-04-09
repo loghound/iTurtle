@@ -17,6 +17,28 @@
 @synthesize startButton,stopButton;
 @synthesize popController;
 
+
+-(void) saveProgram {
+	NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
+	[defaults setObject:self.inputView.text forKey:@"turtle-program"];
+	[defaults synchronize];
+	
+	
+}
+-(void) recallProgram {
+	NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
+	NSString *defaultText;
+	defaultText=[defaults valueForKey:@"turtle-program"];
+	
+	if (!defaultText) {
+		NSString*defaultTextFile=[[NSBundle mainBundle]pathForResource:@"defaultTurtle" ofType:@"txt"];
+		defaultText=[NSString stringWithContentsOfFile:defaultTextFile];
+	} 
+	self.inputView.text=defaultText;
+	
+}
+
+
 -(IBAction) toggleHelp:(UIButton*) helpButton {
 	HelpViewController *helpController=[HelpViewController new];
 	
@@ -24,9 +46,10 @@
 	CGRect translatedHelpButtonFrame=[self.view convertRect:helpButtonFrame fromView:helpButton];
 	
 
-	helpController.modalPresentationStyle=UIModalPresentationPageSheet;
+
 	self.popController=[[UIPopoverController alloc]
 										 initWithContentViewController:helpController];
+	self.popController.popoverContentSize=CGSizeMake(600, 600);
 	[helpController release];
 	popController.delegate=self;
 	
@@ -59,6 +82,7 @@
 	outputView.frame=turtleView;
 	[outputView setNeedsDisplay];
 	[UIView commitAnimations];
+	fullScreen=!fullScreen;
 	
 }
 
@@ -247,14 +271,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
-	NSString *defaultText=[[NSBundle mainBundle]pathForResource:@"defaultTurtle" ofType:@"txt"];
-	if (defaultText) {
-		self.inputView.text=[NSString stringWithContentsOfFile:defaultText];
-	} else
-		self.inputView.text=@"";
+
 	self.frequency=7e-7;
-	NSLog(@"Available fonts=%@",[UIFont fontNamesForFamilyName:@"courier-bold"]);
-	self.inputView.font=[UIFont fontWithName:@"courier-bold" size:16.0];
+
+	self.inputView.font=[UIFont fontWithName:@"courier-bold" size:18.0];
 	self.debugView.font=[UIFont fontWithName:@"courier" size:14.0];
 
 	[[NSNotificationCenter defaultCenter]addObserver:self
@@ -269,6 +289,8 @@
 }
 
 -(void) errorTextChanged:(NSNotification*)not {
+	if (fullScreen)
+		[self fullScreen:nil]; // turn off full screen
 	if (errorWindowCollapsed) {
 		[self toggleErrorScreen:nil];
 		[inputView becomeFirstResponder];// make it first responder

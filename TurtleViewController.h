@@ -22,6 +22,7 @@
 	IBOutlet UIView *debugParentView;
 	IBOutlet UIView *textViewsParent;
 	BOOL errorWindowCollapsed;
+	BOOL fullScreen;
 	IBOutlet UIButton *startButton;
 	IBOutlet UIButton *stopButton;
 	UIPopoverController *popController;
@@ -44,4 +45,6 @@
 -(IBAction) fullScreen:(id) sender ;
 -(IBAction) toggleErrorScreen:(id) sender;
 -(IBAction) toggleHelp:(id) sender;
+-(void) saveProgram;
+-(void) recallProgram;
 @end

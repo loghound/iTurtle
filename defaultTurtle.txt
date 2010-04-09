@@ -1,25 +1,11 @@
-#The 'Sample.xlogo' file, fixed color for 256 colors:
-newturtle "Fred
-newturtle "Frank
-newturtle "Miriam
-
-talkto "Bob	n
-talkto "Frank	e
-talkto "Miriam	w
-talkto "Fred	s
-talkto [Bob Frank Miriam Fred]
-st
-setcolor 255 #black
-make "dir 0
-repeat 200 [
-	make "dir :dir + .07
-	rt :dir
-	fd 3
-]
-make "color 0 
-repeat 120 [
-	setcolor :color
-	make "color :color+1
-	fd 3
-	rt 3
+#This is your first turtle program
+#Press 'Go' to see it draw
+#then start playing with your own turtle commands!
+repeat 6 [
+right 60 
+setcolor random
+repeat 6 [
+	forward 50
+	right 60
+	]
 ]

@@ -293,6 +293,7 @@
 
 	obj = [[StackObject alloc] initWithProgramCounter:aProgramCounter andRepeat:aRepeatCount];
 	[stack addObject:obj];
+	[obj release];
 }
 
 - (void)pop
@@ -645,7 +646,7 @@ DEBUGMSG("expression[1] type:%08x\n", [expression[1] type]);
 										i++;
 									}
 								}
-								[variables addObject:[[Variable alloc] initWithName:temp andExpression:expression[1]]];
+								[variables addObject:[[[Variable alloc] initWithName:temp andExpression:expression[1]]autorelease]];
 							}
 							else
 							{
