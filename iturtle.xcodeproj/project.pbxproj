@@ -26,6 +26,8 @@
 		546F8FB1116DAF4C00BCF9F9 /* HelpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 546F8FAF116DAF4C00BCF9F9 /* HelpViewController.xib */; };
 		547D9585116D4C5B00B89777 /* TurtleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 547D9583116D4C5B00B89777 /* TurtleViewController.m */; };
 		547D9586116D4C5B00B89777 /* TurtleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 547D9584116D4C5B00B89777 /* TurtleViewController.xib */; };
+		54D13DA511718BC800AC7EB6 /* shaded-rounded-wood.png in Resources */ = {isa = PBXBuildFile; fileRef = 54D13DA411718BC800AC7EB6 /* shaded-rounded-wood.png */; };
+		54D13DEF1171995A00AC7EB6 /* top44-shaded-rounded-wood.png in Resources */ = {isa = PBXBuildFile; fileRef = 54D13DEE1171995A00AC7EB6 /* top44-shaded-rounded-wood.png */; };
 		54E0505D116C445F008FEBC4 /* LogoParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E0505C116C445F008FEBC4 /* LogoParser.m */; };
 		54E05062116C448C008FEBC4 /* LogoParserExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E05061116C448C008FEBC4 /* LogoParserExpression.m */; };
 		54E05120116C57C3008FEBC4 /* NSTextViewOutputExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E0511F116C57C3008FEBC4 /* NSTextViewOutputExtensions.m */; };
@@ -69,6 +71,8 @@
 		547D9582116D4C5B00B89777 /* TurtleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TurtleViewController.h; sourceTree = "<group>"; };
 		547D9583116D4C5B00B89777 /* TurtleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TurtleViewController.m; sourceTree = "<group>"; };
 		547D9584116D4C5B00B89777 /* TurtleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TurtleViewController.xib; sourceTree = "<group>"; };
+		54D13DA411718BC800AC7EB6 /* shaded-rounded-wood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "shaded-rounded-wood.png"; path = "misc artwork/shaded-rounded-wood.png"; sourceTree = "<group>"; };
+		54D13DEE1171995A00AC7EB6 /* top44-shaded-rounded-wood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "top44-shaded-rounded-wood.png"; path = "misc artwork/top44-shaded-rounded-wood.png"; sourceTree = "<group>"; };
 		54E0505B116C445F008FEBC4 /* LogoParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogoParser.h; sourceTree = "<group>"; };
 		54E0505C116C445F008FEBC4 /* LogoParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogoParser.m; sourceTree = "<group>"; };
 		54E05060116C448C008FEBC4 /* LogoParserExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogoParserExpression.h; sourceTree = "<group>"; };
@@ -184,6 +188,8 @@
 				5418A9B5116DBE2800766C50 /* Default-Portrait.png */,
 				541EB738116E6B4F00F1E9BC /* fullscreen_icon32.png */,
 				541C824B116EF60A008496AD /* Default-Landscape.png */,
+				54D13DA411718BC800AC7EB6 /* shaded-rounded-wood.png */,
+				54D13DEE1171995A00AC7EB6 /* top44-shaded-rounded-wood.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -315,6 +321,8 @@
 				541C818E116EB15B008496AD /* docs.html in Resources */,
 				541C8191116EE064008496AD /* Wood13l-portrait.png in Resources */,
 				541C824C116EF60A008496AD /* Default-Landscape.png in Resources */,
+				54D13DA511718BC800AC7EB6 /* shaded-rounded-wood.png in Resources */,
+				54D13DEF1171995A00AC7EB6 /* top44-shaded-rounded-wood.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

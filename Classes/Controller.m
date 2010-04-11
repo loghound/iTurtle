@@ -49,17 +49,17 @@
 
 	// Make the UI reflect various preference values...
 	// Save speed:
-	[saveSpeed setState:[prefs saveTurtleSpeed]];
+//	[saveSpeed setState:[prefs saveTurtleSpeed]];
 
 	// Max turtles:
-	[maximumTurtles setIntValue:[prefs maxTurtles]];
+//	[maximumTurtles setIntValue:[prefs maxTurtles]];
 
 	// Line width:
-	number = [NSNumber numberWithFloat:[prefs lineWidth]];
-	[lineWidth selectItemWithTitle:[number stringValue]];
+//	number = [NSNumber numberWithFloat:[prefs lineWidth]];
+// [lineWidth selectItemWithTitle:[number stringValue]];
 
 	// Now show the panel (preferences window) to the user
-	[preferencesPanel makeKeyAndOrderFront:nil];
+//	[preferencesPanel makeKeyAndOrderFront:nil];
 }
 
 

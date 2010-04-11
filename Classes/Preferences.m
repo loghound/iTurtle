@@ -101,7 +101,7 @@ static Preferences	*sharedInstance = NULL;
 
 - (IBAction)openPanel:(id)sender
 {
-	[window makeKeyAndOrderFront:NULL];
+//	[window makeKeyAndOrderFront:NULL];
 }
 
 - (IBAction)revert:(id)sender
