@@ -208,8 +208,8 @@
 		[[turtles objectAtIndex:i] drawAtOffset:pt];
 	}
 	// Draw a border (default: black, 1 pixel wide) around the view [Added by Jeff Skrysak]
-	[[UIColor blackColor] set];
-	UIRectFrame(rect);
+	//[[UIColor blackColor] set];
+	//UIRectFrame(rect);
 #endif
 #ifdef TIME_IT
 	time = FSTime();
