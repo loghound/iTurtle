@@ -71,9 +71,9 @@
 	[UIView beginAnimations:@"full screen" context:nil];
 	CGPoint center=textViewsParent.center;
 	CGRect textFrame=textViewsParent.frame;
-	CGFloat centerMove=2*center.y;
+	CGFloat centerMove=2*center.y-64;
 	if (textFrame.origin.y<0)
-		centerMove=-(-textFrame.origin.y+43); // 43 is height of top menu bar
+		centerMove=-(-textFrame.origin.y); // 43 is height of top menu bar
 	center.y=center.y-centerMove;
 	textViewsParent.center=center;
 	CGRect turtleView=outputView.frame;
@@ -93,14 +93,20 @@
 	CGRect inputFrame=inputView.frame;
 	CGFloat offset=0;
 	if (!errorWindowCollapsed) {
-		offset=errorFrame.size.width-33;
+		offset=errorFrame.size.width+10;
 	} else {
-		offset=-errorFrame.size.width+33;
+		offset=-errorFrame.size.width-10;
 		
 	}
 	errorCenter.x+=offset;
 	inputFrame.size.width+=offset;
 	errorWindowCollapsed=!errorWindowCollapsed;
+	if (errorWindowCollapsed==TRUE)
+		debugParentView.alpha=0;
+	else {
+		debugParentView.alpha=1.0;
+	}
+
 
 	debugParentView.center=errorCenter;
 	inputView.frame=inputFrame;
@@ -274,7 +280,8 @@
 
 	self.frequency=7e-7;
 
-	self.inputView.font=[UIFont fontWithName:@"courier-bold" size:18.0];
+	self.inputView.font=[UIFont fontWithName:@"Courier-Bold" size:16.0];
+	NSLog(@"font family names=%@",[UIFont fontNamesForFamilyName:@"courier"]);
 	self.debugView.font=[UIFont fontWithName:@"courier" size:14.0];
 
 	[[NSNotificationCenter defaultCenter]addObserver:self
@@ -337,6 +344,15 @@
 
 - (void)viewDidUnload {
     [super viewDidUnload];
+	self.startButton=nil;
+	self.stopButton=nil;
+	self.outputView=nil;
+	self.parser=nil;
+	self.debugView=nil;
+	self.inputView=nil;
+	self.debugParentView=nil;
+	self.textViewsParent=nil;
+	self.popController=nil;
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
 }

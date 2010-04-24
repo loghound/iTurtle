@@ -56,6 +56,7 @@
 		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* iTurtle_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iTurtle_Prefix.pch; sourceTree = "<group>"; };
+		54055211117E35FE00BF9E09 /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = "<group>"; };
 		5416B760116DBAAE008EE7BB /* app_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = app_icon.png; sourceTree = "<group>"; };
 		5416B762116DBAB1008EE7BB /* app_store_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = app_store_icon.png; sourceTree = "<group>"; };
 		5418A9B5116DBE2800766C50 /* Default-Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait.png"; sourceTree = "<group>"; };
@@ -154,10 +155,8 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
-				547D9581116D4C3900B89777 /* LH */,
-				54EF8774116C41F80004BA2F /* Utilities */,
-				54EF876E116C41EB0004BA2F /* Globals */,
-				080E96DDFE201D6D7F000001 /* Classes */,
+				54055210117E346B00BF9E09 /* xlogo */,
+				547D9581116D4C3900B89777 /* iTurtle  */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
@@ -190,6 +189,7 @@
 				541C824B116EF60A008496AD /* Default-Landscape.png */,
 				54D13DA411718BC800AC7EB6 /* shaded-rounded-wood.png */,
 				54D13DEE1171995A00AC7EB6 /* top44-shaded-rounded-wood.png */,
+				54055211117E35FE00BF9E09 /* README.markdown */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -204,6 +204,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		54055210117E346B00BF9E09 /* xlogo */ = {
+			isa = PBXGroup;
+			children = (
+				54EF8774116C41F80004BA2F /* Utilities */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				54EF876E116C41EB0004BA2F /* Globals */,
+			);
+			name = xlogo;
+			sourceTree = "<group>";
+		};
 		546F8FAB116DAF3C00BCF9F9 /* Help */ = {
 			isa = PBXGroup;
 			children = (
@@ -216,7 +226,7 @@
 			name = Help;
 			sourceTree = "<group>";
 		};
-		547D9581116D4C3900B89777 /* LH */ = {
+		547D9581116D4C3900B89777 /* iTurtle  */ = {
 			isa = PBXGroup;
 			children = (
 				546F8FAB116DAF3C00BCF9F9 /* Help */,
@@ -226,7 +236,7 @@
 				547D9583116D4C5B00B89777 /* TurtleViewController.m */,
 				547D9584116D4C5B00B89777 /* TurtleViewController.xib */,
 			);
-			name = LH;
+			name = "iTurtle ";
 			sourceTree = "<group>";
 		};
 		54EF876E116C41EB0004BA2F /* Globals */ = {
